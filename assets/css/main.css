@@ -1,0 +1,41 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+}
+
+.box-headers {
+  padding: 5px;
+  padding-left: 20px;
+  border-top-left-radius: .2rem;
+	border-top-right-radius: .2rem;
+  color: snow;
+}
+
+.code-header {
+  background: steelblue;
+}
+
+.input-header {
+  margin: 0;
+  background: rgb(73, 73, 73);
+}
+
+.input-body {
+  padding: 10px;
+  background: rgb(243, 243, 243);
+}
+
+.shadow{
+  -webkit-box-shadow: 0 6px 6px -6px #777;
+     -moz-box-shadow: 0 6px 6px -6px #777;
+          box-shadow: 0 6px 6px -6px #777;
+}
