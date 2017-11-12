@@ -17,22 +17,24 @@
 
 <body>
   <div class="container">
-    <h1><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions" target="_blank">CSS Transition</a></h1>
-    <p>is a module of CSS that lets you create gradual transitions between the values of specific CSS properties. The behavior of these transitions can be controlled by specifying their timing function, duration, and other attributes.</p>
+    <h1><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform?v=b" target="_blank">transform</a></h1>
+    <p> lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled, and skewed.</p>
     <hr>
     <h3>Let's Start</h3>
 
-    <p>
-      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition" target="_blank">Transition</a>
-      <span> is a shorthand property for transition-property, transition-duration, transition-timing-function, and transition-delay.</span>
-    </p>
+    <p>text goes here</p>
 
     <section>
       <div class="col-lg-8">
         <div class="box-headers code-header">CSS</div>
         <pre class="shadow"><code class="language-css">
-  /* transition: property duration */
-
+  transform: matrix(1.0, 2.0, 3.0, 4.0, 5.0, 6.0);
+  transform: translate(120px, 50%);
+  transform: scale(2, 0.5);
+  transform: rotate(0.5turn);
+  transform: skew(30deg, 20deg);
+  transform: perspective(17px);
+  transform: translateX(50px) rotate(50deg) translateY(15px);
         </code></pre>
         <!-- Code Block -->
       </div>
