@@ -16,23 +16,63 @@
 
 <body>
   <div class="container">
-    <h1>CSS Transitions</h1>
-    <h5></h5>
+    <h1>CSS Animations</h1>
+    <p>make it possible to animate transitions from one CSS style configuration to another. Animations consist of two components, a style describing the CSS animation and a set of keyframes that indicate the start and end states of the animation’s style, as well as possible intermediate waypoints.</p>
     <hr>
-    <h3>Retrieve DOM Content</h3>
+    <h3>Let's Start</h3>
 
-    <h5>
-      <a href="http://api.jquery.com/category/selectors/basic-css-selectors/" target="_blank">Selectors</a>
-      <span> are used to select contents.</span>
-    </h5>
+      <p>The <strong><code>animation</code></strong> CSS property is a shorthand property for the various animation properties: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-name" target="_blank"><code>animation-name</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-duration"><code>animation-duration</code></a>, <a  href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function" target="_blank"><code>animation-timing-function</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-delay" target="_blank"><code>animation-delay</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count" target="_blank"><code>animation-iteration-count</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-direction" target="_blank"><code>animation-direction</code></a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode" target="_blank"><code>animation-fill-mode</code></a>, and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation-play-state" target="_blank"><code>animation-play-state</code></a>.</p>
+
+      <p><span class="seoSummary">The <strong><code>@keyframes</code></strong> CSS <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule" target="_blank">at-rule</a> controls the intermediate steps in a CSS animation sequence by defining styles for keyframes (or waypoints) along the animation sequence.</span> This gives more control over the intermediate steps of the animation sequence than <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions" target="_blank">transitions</a>.</p>
 
     <section>
       <div class="col-lg-8">
         <div class="box-headers code-header">CSS</div>
         <pre class="shadow"><code class="language-css">
-          body {
-            font-family: "Source Sans Pro", sans-serif;
-          }
+  .animated-class {
+    animation:
+      $name
+      $duration
+      $timing-function (optional)
+      $animation-delay (optional)
+      $iteration-count (optional)
+  }
+
+  /* multiple animation */
+  .animated-class {
+    animation:
+      white-to-red 1s linear 1,
+      black-to-red 2s ease-out infinite 2s;
+  }
+
+  /* using % */
+  @keyframes red-to-blue {
+    0% {
+      background: red;
+    }
+    100% {
+      background: blue;
+    }
+  }
+
+  /* consolidate shared values */
+  @keyframes red-to-blue {
+    0%, 100% {color: red}
+    50% {color: blue}
+  }
+
+  /* using from - to */
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
         </code></pre>
         <!-- Code Block -->
       </div>
